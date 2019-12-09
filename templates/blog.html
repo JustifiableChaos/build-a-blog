@@ -1,0 +1,16 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<a href = '{{url_for("new_post")}}'>Make a new post!</a>
+<p>Logged in as: <a href ="{{url_for('history', user = username)}}">{{username}}</a></p>
+<a href = '{{url_for("logout")}}'>Log Out</a>
+{%for thing in posts%}
+
+<h3><a href="{{url_for('post', id=thing.post_id)}}">{{thing.title}}</h3></a>
+<p>{{thing.post_id}}</p>
+<blockquote>{{thing.content}}</blockquote>
+<p>Post made by: <a href ="{{url_for('history', user = thing.username)}}">{{thing.username}}</a></p>
+<hr>
+{%endfor%}
+
+{%endblock%}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog: Built!</title>
+    </head>
+    <body>
+        <h1>Welcome to MyBlog!</h1>
+
+        <form method = 'POST' action = 'login_attempt' style='background-color: grey; border-radius: 5px; margin-right: 70%; padding-left: 5%; padding-top: 5%; padding-bottom: 3%;'>
+            {%block error%}
+            {%endblock%}
+            <legend >Login Here!</legend><br>
+            <input type='text' name = 'username' placeholder="Username"><br><br>
+            <input type='password' name = 'password' placeholder="Password"><br><br>
+            <input type='submit' value = 'Log In!'>
+            
+        </form><br>
+        <p>New user? Click <a href="{{url_for('new_user')}}">here</a> to create your free account!</p>
+    </body>
+
+
+</html>

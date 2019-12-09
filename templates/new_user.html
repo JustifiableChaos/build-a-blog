@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+<form action = 'join' method = "POST"style='background-color: grey; border-radius: 5px; margin-right: 70%; padding-left: 5%; padding-top: 5%; padding-bottom: 3%;'>
+    <p>{{err}}</p>
+    <input type = 'text' placeholder='Username' maxlength='20' rows='1' cols = '30' name = 'user'></textarea><br><br>
+    <input type = 'password' placeholder="Password" maxlength = '20' rows = '1' cols = '30' name = 'pass'></textarea><br><br>
+    <input type = 'password' placeholder='Verify Password' maxlength='20' rows = 1 cols = '30' name = 'passCheck'></textarea><br><br>
+    <input type = 'submit' value = 'Join MyBlog!'>
+</form>
+{%endblock%}

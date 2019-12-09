@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Please fill in all boxes to continue!</h1>
+<form action="submitted" method="POST">
+        <textarea placeholder="What's on your mind?" maxlength="20" rows='1' cols = '30' name = 'title'></textarea><br><br>
+    <textarea placeholder="What's on your mind?" maxlength="200" rows='10' cols = '100' name = 'content'></textarea><br><br>
+    
+    <input type=submit value = 'Share it with the world!'>
+</form>
+{%endblock%}
